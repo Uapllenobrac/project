@@ -43,9 +43,13 @@ public class MainActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.add:
                 String[] newFilm = new String[] { "Blade Runner", "Ridley Scott", "Rocky Horror Picture Show", "Jim Sharman", "The Godfather", "Francis Ford Coppola", "Toy Story", "John Lasseter" };
+                String[] actors = new String[]{"Harrison Ford","Tim Curry","Al Pacino","Tom Hanks"};
+                String[] countrys = new String[]{"EUA","UK","EUA","EUA"};
+                int[] years = new int[]{1982,1975,1972,1995};
+                int[] rates = new int[]{8,7,8,10};
                 int nextInt = new Random().nextInt(4);
                 // save the new film to the database
-                film = filmData.createFilm(newFilm[nextInt*2], newFilm[nextInt*2 + 1]);
+                film = filmData.createFilm(newFilm[nextInt*2], newFilm[nextInt*2 + 1],countrys[nextInt],years[nextInt],actors[nextInt],rates[nextInt]);
                 adapter.add(film);
                 break;
             case R.id.delete:

@@ -3,14 +3,11 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/activity1"
-            android:title="Activity1" />
+            android:id="@+id/inici"
+            android:title="Inici" />
         <item
-            android:id="@+id/activity2"
-            android:title="Activity2" />
-        <item
-            android:id="@+id/activity3"
-            android:title="Activity3" />
+            android:id="@+id/buscar"
+            android:title="Buscar" />
         <item
             android:id="@+id/mainactivity"
             android:title="MainActivity" />

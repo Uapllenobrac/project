@@ -1,32 +1,19 @@
 package com.example.pr_idi.mydatabaseexample;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
-import android.widget.ListView;
-
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-import static android.R.id.list;
+import android.widget.SearchView;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-    private FilmData filmData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,14 +44,11 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         switch (id){
-            case R.id.activity1:
-                startActivity(new Intent(getApplicationContext(),Activity1.class));
+            case R.id.inici:
+                startActivity(new Intent(getApplicationContext(),Inici.class));
                 break;
-            case R.id.activity2:
-                startActivity(new Intent(getApplicationContext(),Activity2.class));
-                break;
-            case R.id.activity3:
-                startActivity(new Intent(getApplicationContext(),Activity3.class));
+            case R.id.buscar:
+                startActivity(new Intent(getApplicationContext(),Buscar.class));
                 break;
             case R.id.mainactivity:
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
