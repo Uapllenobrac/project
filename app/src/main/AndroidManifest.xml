@@ -10,12 +10,24 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BaseActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Buscar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".Crear"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Valorar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Borrar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ajuda"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Info"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"

@@ -50,8 +50,14 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.buscar:
                 startActivity(new Intent(getApplicationContext(),Buscar.class));
                 break;
-            case R.id.mainactivity:
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            case R.id.crear:
+                startActivity(new Intent(getApplicationContext(),Crear.class));
+                break;
+            case R.id.ajuda:
+                startActivity(new Intent(getApplicationContext(),Ajuda.class));
+                break;
+            case R.id.info:
+                startActivity(new Intent(getApplicationContext(),Info.class));
                 break;
         }
 

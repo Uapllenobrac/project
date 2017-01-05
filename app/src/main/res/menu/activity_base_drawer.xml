@@ -6,11 +6,20 @@
             android:id="@+id/inici"
             android:title="Inici" />
         <item
+            android:id="@+id/dades"
+            android:title="Base de Dades Completa" />
+        <item
             android:id="@+id/buscar"
             android:title="Buscar" />
         <item
-            android:id="@+id/mainactivity"
-            android:title="MainActivity" />
+            android:id="@+id/crear"
+            android:title="Crear Pel·liculas" />
+        <item
+            android:id="@+id/ajuda"
+            android:title="Ajuda" />
+        <item
+            android:id="@+id/info"
+            android:title="Informació" />
     </group>
 
 </menu>
