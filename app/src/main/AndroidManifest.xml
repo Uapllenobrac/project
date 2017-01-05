@@ -12,24 +12,6 @@
             android:name=".BaseActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Buscar"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Crear"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".PeliRateDelete"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Ajuda"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Info"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Inici"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -38,6 +20,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Buscar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Crear"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ajuda"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PeliRateDelete"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -89,6 +89,12 @@ public class FilmData {
                 + " = " + id, null);
     }
 
+    public void changeRate(Film film, int v){
+        //CUTRE
+        deleteFilm(film);
+        createFilm(film.getTitle(),film.getDirector(),film.getCountry(),film.getYear(),film.getProtagonist(),v);
+    }
+
     public List<Film> getAllFilms() {
         List<Film> comments = new ArrayList<>();
 
@@ -105,17 +111,6 @@ public class FilmData {
         cursor.close();
         return comments;
     }
-
-    public String[] getAllActors(){
-        List<String> r = new LinkedList<>();
-        List<Film> films = this.getAllFilms();
-        for (Film f : films){
-            r.add(f.getProtagonist());
-        }
-        String[] res = r.toArray(new String[r.size()]);
-        return res;
-    }
-
 
     private Film cursorToFilm(Cursor cursor) {
         Film film = new Film();
