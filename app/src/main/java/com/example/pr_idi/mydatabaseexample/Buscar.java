@@ -1,20 +1,14 @@
 package com.example.pr_idi.mydatabaseexample;
 
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.SearchView.OnQueryTextListener;
 
-import java.lang.reflect.Array;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,16 +23,23 @@ public class Buscar extends BaseActivity {
 
         filmData = new FilmData(this);
         filmData.open();
-/*
-        SearchView sv = (SearchView) findViewById(R.id.searchview);
-        ListView lv = (ListView) findViewById(R.id.listbusca);
-        ArrayAdapter<Film> adapter = (ArrayAdapter<Film>) lv.getAdapter();
 
+        SearchView sv = (SearchView) findViewById(R.id.searchview);
+        //ArrayAdapter<Film> adapter;// = (ArrayAdapter<Film>) lv.getAdapter();
+        sv.setQueryHint("Buscar aquí...");
+        sv.setIconifiedByDefault(false);
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
             @Override
             public boolean onQueryTextSubmit(String query) {
-                callSearch(query);
+                if (!callSearch(query)){
+                    List<String> notfound = new LinkedList<>();
+                    notfound.add("No s'han trobat pelicules on hi participi aquest actor o que tinguin aquest titol");
+                    final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_list_item_1,notfound);
+                    ListView lv = (ListView) findViewById(R.id.listbusca);
+                    lv.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+                }
                 return true;
             }
 
@@ -48,28 +49,41 @@ public class Buscar extends BaseActivity {
                 return true;
             }
 
-            public void callSearch(String query) {
+            public boolean callSearch(String query) {
 
                 int s = query.length();
 
                 List<Film> values = filmData.getAllFilms();
                 List<Film> res = new LinkedList<>();
-                for (Film f : values){
-                    String t = f.getProtagonist();
+                for (Film f : values) {
+                    if (s > 0){
+                        String t = f.getProtagonist();
                     String n = f.getTitle();
-                    if (s < t.length()) t = t.substring(0,s);
-                    if (s < n.length()) n = n.substring(0,s);
+                    if (s < t.length()) t = t.substring(0, s);
+                    if (s < n.length()) n = n.substring(0, s);
                     if (t.equalsIgnoreCase(query) || n.equalsIgnoreCase(query)) res.add(f);
+                    }
                 }
-                adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, res);
+                final ArrayAdapter<Film> adapter = new ArrayAdapter<Film>(getBaseContext(), android.R.layout.simple_list_item_1, res);
+                ListView lv = (ListView) findViewById(R.id.listbusca);
                 lv.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
+                if (!res.isEmpty()) return true;
+                else return false;
             }
-        });*/
+        });
+
+        ListView lv = (ListView) findViewById(R.id.listbusca);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(getApplicationContext(),PeliRateDelete.class));
+            }
+        });
     }
 
 
-
+/*
 
     public void onClick(View view) {
         @SuppressWarnings("unchecked")
@@ -96,5 +110,5 @@ public class Buscar extends BaseActivity {
                 break;
         }
         adapter.notifyDataSetChanged();
-    }
+    }*/
 }

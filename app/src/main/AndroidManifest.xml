@@ -18,10 +18,7 @@
             android:name=".Crear"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Valorar"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Borrar"
+            android:name=".PeliRateDelete"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Ajuda"

@@ -1,11 +1,13 @@
 package com.example.pr_idi.mydatabaseexample;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -37,5 +39,12 @@ public class Inici extends BaseActivity {
 
         ListView lv = (ListView) findViewById(R.id.titlelist);
         lv.setAdapter(adapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(getApplicationContext(),PeliRateDelete.class));
+            }
+        });
     }
 }

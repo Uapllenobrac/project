@@ -4,7 +4,8 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/inici"
-            android:title="Inici" />
+            android:title="Inici"
+            android:showAsAction="never" />
         <item
             android:id="@+id/dades"
             android:title="Base de Dades Completa" />

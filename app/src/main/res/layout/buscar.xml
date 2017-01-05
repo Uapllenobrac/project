@@ -26,15 +26,9 @@
                 android:layout_width="237dp"
                 android:layout_height="match_parent"
                 android:id="@+id/searchview"
-                android:elevation="0dp" />
-
-            <Button
-                android:text="Prova Sort"
-                android:layout_width="82dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/buscabut"
-                android:onClick="onClick"
-                tools:layout_width="wrap_content" />
+                android:elevation="0dp"
+                android:layout_weight="0.87"
+                app:queryHint="Buscar aquí.." />
 
         </LinearLayout>
 
