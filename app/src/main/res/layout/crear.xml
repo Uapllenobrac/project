@@ -36,7 +36,7 @@
         android:inputType="numberSigned"
         android:ems="10"
         android:layout_marginTop="13dp"
-        android:id="@+id/editText9"
+        android:id="@+id/any"
         android:text="Any d'estrena"
         android:selectAllOnFocus="true"
         android:layout_below="@+id/pais"
@@ -64,31 +64,9 @@
         android:ems="10"
         android:id="@+id/director"
         android:selectAllOnFocus="true"
-        android:layout_below="@+id/editText9"
+        android:layout_below="@+id/any"
         android:layout_alignParentStart="true"
         android:layout_marginTop="11dp"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="Crear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:id="@+id/crear"
-        android:layout_marginTop="37dp"
-        android:visibility="visible"
-        android:layout_below="@+id/editText12"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Cancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cancelar_crear"
-        android:visibility="visible"
-        android:layout_marginEnd="56dp"
-        android:layout_alignBaseline="@+id/crear"
-        android:layout_alignBottom="@+id/crear"
         android:layout_alignParentEnd="true" />
 
     <EditText
@@ -97,7 +75,7 @@
         android:inputType="number"
         android:ems="10"
         android:layout_marginTop="19dp"
-        android:id="@+id/editText12"
+        android:id="@+id/nota"
         android:text="Nota"
         android:selectAllOnFocus="true"
         android:layout_below="@+id/protagonista"
@@ -116,4 +94,28 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="18dp"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelar_crear"
+        android:visibility="visible"
+        android:onClick="onClick"
+        android:layout_marginEnd="56dp"
+        android:layout_alignBaseline="@+id/crear"
+        android:layout_alignBottom="@+id/crear"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Crear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:id="@+id/crear"
+        android:onClick="onClick"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/nota"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
 </RelativeLayout>
