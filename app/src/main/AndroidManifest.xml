@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BaseActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Inici"
             android:theme="@style/AppTheme.NoActionBar">
@@ -25,7 +25,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Buscar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".Crear"
             android:theme="@style/AppTheme.NoActionBar" />

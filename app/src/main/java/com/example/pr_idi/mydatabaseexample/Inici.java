@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Inici extends BaseActivity {
@@ -31,6 +32,11 @@ public class Inici extends BaseActivity {
                 return f1.getTitle().compareTo(f2.getTitle());
             }
         });
+
+        /*List<String> res = new LinkedList<>();
+        for (Film f : values){
+            res.add(f.getTitle());
+        }*/
 
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
