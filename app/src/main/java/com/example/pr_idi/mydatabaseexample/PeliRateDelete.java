@@ -60,10 +60,11 @@ public class PeliRateDelete extends BaseActivity {
         rb.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
-                peli.setCritics_rate((int)v*2);
+                float r = v*2;
+                peli.setCritics_rate((int)r);
                 TextView t = (TextView) findViewById(R.id.rate);
                 t.setText(String.valueOf(peli.getCritics_rate()));
-                filmData.changeRate(peli,(int)v*2);
+                filmData.changeRate(peli,(int)r);
             }
         });
     }

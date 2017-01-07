@@ -1,6 +1,7 @@
 package com.example.pr_idi.mydatabaseexample;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -10,6 +11,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.SearchView;
 
@@ -21,7 +24,14 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         super.setContentView(R.layout.activity_base);
         setView();
     }
-
+/*
+    @Override
+    protected void onDrawerOpened(View view){
+        super.onDrawerOpened(view);
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
+    }
+*/
     protected void setView() {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
