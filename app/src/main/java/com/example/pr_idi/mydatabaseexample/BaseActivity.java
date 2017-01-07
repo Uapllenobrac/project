@@ -24,14 +24,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         super.setContentView(R.layout.activity_base);
         setView();
     }
-/*
-    @Override
-    protected void onDrawerOpened(View view){
-        super.onDrawerOpened(view);
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
-    }
-*/
+
     protected void setView() {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -39,7 +32,21 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close){
+
+        @Override
+        public void onDrawerClosed(View drawerView) {
+            super.onDrawerClosed(drawerView);
+        }
+
+        @Override
+        public void onDrawerOpened(View drawerView) {
+            super.onDrawerOpened(drawerView);
+            InputMethodManager inputMethodManager = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+    };
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
