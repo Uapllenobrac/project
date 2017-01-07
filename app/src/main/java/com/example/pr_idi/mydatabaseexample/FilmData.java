@@ -90,9 +90,10 @@ public class FilmData {
     }
 
     public void changeRate(Film film, int v){
-        //CUTRE
-        deleteFilm(film);
-        createFilm(film.getTitle(),film.getDirector(),film.getCountry(),film.getYear(),film.getProtagonist(),v);
+        long id = film.getId();
+        ContentValues cv = new ContentValues();
+        cv.put(MySQLiteHelper.COLUMN_CRITICS_RATE,v);
+        database.update(MySQLiteHelper.TABLE_FILMS, cv, "_id="+id,null);
     }
 
     public List<Film> getAllFilms() {

@@ -69,6 +69,12 @@ public class Buscar extends BaseActivity {
                     if (t.equalsIgnoreCase(query) || n.equalsIgnoreCase(query)) res.add(f);
                     }
                 }
+                Collections.sort(res, new Comparator<Film>() {
+                    @Override
+                    public int compare(Film f1, Film f2) {
+                        return f1.getTitle().compareTo(f2.getTitle());
+                    }
+                });
                 final ArrayAdapter<Film> adapter = new ArrayAdapter<Film>(getBaseContext(), android.R.layout.simple_list_item_1, res);
                 ListView lv = (ListView) findViewById(R.id.listbusca);
                 lv.setAdapter(adapter);
