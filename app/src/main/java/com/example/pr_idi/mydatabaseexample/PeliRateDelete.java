@@ -2,6 +2,10 @@ package com.example.pr_idi.mydatabaseexample;
 
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -55,8 +59,11 @@ public class PeliRateDelete extends BaseActivity {
         tv.setText(String.valueOf(peli.getCritics_rate()));
 
         RatingBar rb = (RatingBar) findViewById(R.id.ratingBar);
+        LayerDrawable stars = (LayerDrawable) rb.getProgressDrawable();
+        stars.getDrawable(0).setColorFilter(Color.rgb(204,0,0), PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(1).setColorFilter(Color.rgb(204,0,0), PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(2).setColorFilter(Color.rgb(204,0,0), PorterDuff.Mode.SRC_ATOP);
         rb.setRating((float)peli.getCritics_rate()/2);
-
         rb.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
