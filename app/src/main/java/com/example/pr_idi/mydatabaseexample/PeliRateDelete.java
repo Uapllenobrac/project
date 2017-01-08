@@ -25,7 +25,7 @@ public class PeliRateDelete extends BaseActivity {
 
         Intent intent = getIntent();
         String s = intent.getExtras().getString("id");
-
+        System.out.println(s);
         int n = s.length();
 
         filmData = new FilmData(this);

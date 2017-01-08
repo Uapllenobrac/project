@@ -9,9 +9,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.SimpleAdapter;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -75,21 +78,42 @@ public class Buscar extends BaseActivity {
                         return f1.getTitle().compareTo(f2.getTitle());
                     }
                 });
-                final ArrayAdapter<Film> adapter = new ArrayAdapter<Film>(getBaseContext(), android.R.layout.simple_list_item_1, res);
-                ListView lv = (ListView) findViewById(R.id.listbusca);
+
+                ArrayList<HashMap<String, String>> data;
+
+                ListView lv = (ListView)findViewById(R.id.listbusca);
+                List<String> t = new LinkedList<>();
+                List<String> p = new LinkedList<>();
+                data = new ArrayList<>();
+
+                for (Film f : res){
+                    t.add(f.getTitle());
+                    p.add(f.getProtagonist());
+                }
+
+
+                for(int i=0;i<res.size();i++){
+                    HashMap<String,String> datum = new HashMap<>();
+                    datum.put("a",t.get(i));
+                    datum.put("b", p.get(i));
+                    data.add(datum);
+                }
+                SimpleAdapter adapter = new SimpleAdapter(getBaseContext(), data, android.R.layout.simple_list_item_2, new String[] {"a", "b"}, new int[] {android.R.id.text1, android.R.id.text2});
                 lv.setAdapter(adapter);
+
                 adapter.notifyDataSetChanged();
                 if (!res.isEmpty()) return true;
                 else return false;
             }
         });
         //Quan l'usuari selecciona una peli es salta a l activity de ratedelete
-        ListView lv = (ListView) findViewById(R.id.listbusca);
+        final ListView lv = (ListView) findViewById(R.id.listbusca);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String s = adapterView.getAdapter().getItem(i).toString();
-                Intent intent = new Intent(getApplicationContext(),PeliRateDelete.class);
+                s = s.substring(3);
+                Intent intent = new Intent(getBaseContext(),PeliRateDelete.class);
                 intent.putExtra("id",s);
                 startActivity(intent);
             }
@@ -114,9 +138,34 @@ public class Buscar extends BaseActivity {
                 if (t.equalsIgnoreCase(query) || n.equalsIgnoreCase(query)) res.add(f);
             }
         }
-        final ArrayAdapter<Film> adapter = new ArrayAdapter<Film>(getBaseContext(), android.R.layout.simple_list_item_1, res);
-        ListView lv = (ListView) findViewById(R.id.listbusca);
+        Collections.sort(res, new Comparator<Film>() {
+            @Override
+            public int compare(Film f1, Film f2) {
+                return f1.getTitle().compareTo(f2.getTitle());
+            }
+        });
+        ArrayList<HashMap<String, String>> data;
+
+        ListView lv = (ListView)findViewById(R.id.listbusca);
+        List<String> t = new LinkedList<>();
+        List<String> p = new LinkedList<>();
+        data = new ArrayList<>();
+
+        for (Film f : res){
+            t.add(f.getTitle());
+            p.add(f.getProtagonist());
+        }
+
+
+        for(int i=0;i<res.size();i++){
+            HashMap<String,String> datum = new HashMap<>();
+            datum.put("a",t.get(i));
+            datum.put("b", p.get(i));
+            data.add(datum);
+        }
+        SimpleAdapter adapter = new SimpleAdapter(getBaseContext(), data, android.R.layout.simple_list_item_2, new String[] {"a", "b"}, new int[] {android.R.id.text1, android.R.id.text2});
         lv.setAdapter(adapter);
+
         adapter.notifyDataSetChanged();
         super.onResume();
     }

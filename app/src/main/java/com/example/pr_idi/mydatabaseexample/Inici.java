@@ -7,9 +7,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -26,6 +29,7 @@ public class Inici extends BaseActivity {
         filmData.open();
 
         List<Film> values = filmData.getAllFilms();
+        List<String> res = new LinkedList<>();
         Collections.sort(values, new Comparator<Film>() {
             @Override
             public int compare(Film f1, Film f2) {
@@ -33,18 +37,19 @@ public class Inici extends BaseActivity {
             }
         });
 
-        /*List<String> res = new LinkedList<>();
         for (Film f : values){
             res.add(f.getTitle());
-        }*/
+        }
 
-        // use the SimpleCursorAdapter to show the
-        // elements in a ListView
-        ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, values);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, res);
 
         final ListView lv = (ListView) findViewById(R.id.titlelist);
         lv.setAdapter(adapter);
+
+
+        // use the SimpleCursorAdapter to show the
+        // elements in a ListView
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -61,6 +66,7 @@ public class Inici extends BaseActivity {
     protected void onResume() {
         filmData.open();
         List<Film> values = filmData.getAllFilms();
+        List<String> res = new LinkedList<>();
         Collections.sort(values, new Comparator<Film>() {
             @Override
             public int compare(Film f1, Film f2) {
@@ -68,10 +74,14 @@ public class Inici extends BaseActivity {
             }
         });
 
+        for (Film f : values){
+            res.add(f.getTitle());
+        }
+
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
-        ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, values);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, res);
 
         final ListView lv = (ListView) findViewById(R.id.titlelist);
         lv.setAdapter(adapter);
