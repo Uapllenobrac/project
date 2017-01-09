@@ -32,7 +32,7 @@ public class MainActivity extends BaseActivity {
         myRecyclerView.setLayoutManager(myLayoutManager);
 
         // specify an adapter (see also next example)
-        myAdapter = new MyAdapter(filmData);
+        myAdapter = new MyAdapter(filmData.getAllFilms());
         myRecyclerView.setAdapter(myAdapter);
 
     }
