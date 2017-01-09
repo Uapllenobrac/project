@@ -3,6 +3,7 @@ package com.example.pr_idi.mydatabaseexample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,10 +11,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +32,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -73,16 +78,32 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.crear:
                 startActivity(new Intent(getApplicationContext(),Crear.class));
                 break;
-            case R.id.ajuda:
-                startActivity(new Intent(getApplicationContext(),Ajuda.class));
-                break;
-            case R.id.info:
-                startActivity(new Intent(getApplicationContext(),Info.class));
-                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.base, menu);
+        return true;
+    }
+
+    @Override
+    public  boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.buscarmenu:
+                startActivity(new Intent(getApplicationContext(),Buscar.class));
+                break;
+            case R.id.about:
+                startActivity(new Intent(getApplicationContext(),Info.class));
+                break;
+            case R.id.help:
+                startActivity(new Intent(getApplicationContext(),Ajuda.class));
+                break;
+        }
         return true;
     }
 

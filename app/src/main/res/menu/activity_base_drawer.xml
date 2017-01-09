@@ -4,8 +4,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/inici"
-            android:title="Inici"
-            android:showAsAction="never" />
+            android:title="Inici" />
         <item
             android:id="@+id/dades"
             android:title="Base de Dades Completa" />
@@ -15,12 +14,6 @@
         <item
             android:id="@+id/crear"
             android:title="Crear Pel·liculas" />
-        <item
-            android:id="@+id/ajuda"
-            android:title="Ajuda" />
-        <item
-            android:id="@+id/info"
-            android:title="Informació" />
     </group>
 
 </menu>

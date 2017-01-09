@@ -1,11 +1,10 @@
 <resources>
-    <string name="app_name">MyDatabaseExample</string>
+    <string name="app_name">MyFilmDatabse</string>
     <string name="title_activity_base">BaseActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_alta_pelis">AltaPelis</string>
 </resources>
