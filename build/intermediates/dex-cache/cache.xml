@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="df5c7f748dbc89b99d0fabac558e15dc8e3b3478">
+        sha1="4b4bc8900e96839b4090553cb1fbc9433ed9c0bd">
         <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_433741a52b34c500281b07280c32bc1beaca3c0e/classes.dex" />
     </item>
     <item
@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="fd9975ea43c6099e578d339e05ef3af4753fc499">
+        sha1="3fbdb6acc99ae353c53075fb073e45babcebbc13">
         <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_30e2b22902152351318d9c4fad03e2355e0f8b7c/classes.dex" />
     </item>
 
