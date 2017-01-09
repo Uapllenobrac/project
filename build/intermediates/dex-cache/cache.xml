@@ -3,39 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_3001906889a20eb95a9d1bbbf8dff352c37f86c8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/m4x/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_49c5d1dbb4c51949108c55f30897869a8b063725/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="4b4bc8900e96839b4090553cb1fbc9433ed9c0bd">
-        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_433741a52b34c500281b07280c32bc1beaca3c0e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_6d753377817c1bf10bfcb8ddcb9f243f1a0bbb23/classes.dex" />
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_4691621727ed8b1e375859770da8dd17521544e5/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -45,6 +18,24 @@
         revision="22.0.1"
         sha1="1821601ddbec5ff125653097812823388700af74">
         <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-22.2.1_dccecbefabc5d8d90ca39b5ccdc527252a2d8ecb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/m4x/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_71c7a9061d28161460147590ed166fa4ba4f634a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_626560da9a745334fe3a57fb8d1728519546339c/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -61,8 +52,44 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="3fbdb6acc99ae353c53075fb073e45babcebbc13">
+        sha1="5f0ed01d0abb2c867bea0896887931c427c8d68b">
         <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_30e2b22902152351318d9c4fad03e2355e0f8b7c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_3001906889a20eb95a9d1bbbf8dff352c37f86c8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_9b7fbe0a157bacf0266589163af0d15bf71c1907/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="fc58c48cd1a71888f8535f3ccde2ff32938e8084">
+        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_433741a52b34c500281b07280c32bc1beaca3c0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_6d753377817c1bf10bfcb8ddcb9f243f1a0bbb23/classes.dex" />
     </item>
 
 </items>
