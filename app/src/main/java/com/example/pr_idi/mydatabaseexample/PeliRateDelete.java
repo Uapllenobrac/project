@@ -63,11 +63,13 @@ public class PeliRateDelete extends BaseActivity {
         stars.getDrawable(0).setColorFilter(Color.rgb(204,0,0), PorterDuff.Mode.SRC_ATOP);
         stars.getDrawable(1).setColorFilter(Color.rgb(204,0,0), PorterDuff.Mode.SRC_ATOP);
         stars.getDrawable(2).setColorFilter(Color.rgb(204,0,0), PorterDuff.Mode.SRC_ATOP);
-        rb.setRating((float)peli.getCritics_rate()/2);
+        double r = (double) peli.getCritics_rate();
+        r = r * 0.5;
+        rb.setRating((float)r);
         rb.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
-                float r = v*2;
+                double r = v*2;
                 peli.setCritics_rate((int)r);
                 TextView t = (TextView) findViewById(R.id.rate);
                 t.setText(String.valueOf(peli.getCritics_rate()));
