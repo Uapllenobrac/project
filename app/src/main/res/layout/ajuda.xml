@@ -10,56 +10,56 @@
     tools:context="com.example.pr_idi.mydatabaseexample.Inici">
 
     <TextView
-        android:text="En tota la aplicació a dalt a l'esquerra hi ha un menú que et permat accedir a diferentes funcionalitats de l'aplicació. També hi ha un buscador que et permet nuscar pel·lícules pel títol i per protagonista i fent clic a qualsevol s'obrirà la pantalla amb la informació de la pel·lícula."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="I la última opció és la de crear pel·licules on has d'entrar tota la seva informació i fer clic a crear per crear-la o cancel·lar per tornar enrere."
+        android:text="I l'última opció és la de crear pel·lícules on has d'entrar tota la seva informació i fer clic a crear per crear-la o cancel·lar per tornar enrere."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView10"
         android:layout_below="@+id/textView9"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="11dp" />
 
     <TextView
-        android:text="La tercera opció és la mateixa que la búsqueda que hi ha a la part superior de la pantalla."
+        android:text="La tercera opció és la mateixa que la cerca que hi ha a la part superior de la pantalla."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView9"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/textView8"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp" />
-
-    <TextView
-        android:text="La primera opció és la de anar a l'inici que ja hem explicat."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="La segona és la de anar a una bases de dades on surt tota la informació de cada pel·licula ordenada per any d'estrena i si fas clic a quansevol de les pel·licules, s'obrirà la pantalla amb tota la informació de la pel·lícula."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/textView7"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:text="La pantalla principal es una llista amb tots els títols de les pel·lícules ordenats alfabeticament. Si fas clic a quansevol de les pel·licules, s'obrirà una nova pantalla amb tota la informació de la pel·lícula on també es pot modificar la puntuació que té o eliminar-la."
+        android:text="La pantalla principal és una llista amb tots els títols de les pel·lícules ordenats alfabèticament. Si fas clic a qualsevol de les pel·lícules, s'obrirà una nova pantalla amb tota la informació de la pel·lícula on també es pot modificar la puntuació que té o eliminar-la."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="En tota l'aplicació a dalt a l'esquerra hi ha un menú que permet accedir a diferents funcionalitats de l'aplicació. També hi ha un buscador que et permet buscar pel·lícules pel títol i per protagonista i fent clic a qualsevol s'obrirà la pantalla amb la informació de la pel·lícula i a la dreta fent clic als tres punts pots accedir a aquesta ajuda, a informació sobre l'aplicació i pots reiniciar la base de dades de l'aplicació i fer que només hagin quatre pel·lícules de mostra."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:text="La segona és la d'anar a una base de dades on surt tota la informació de cada pel·lícula ordenada per any d'estrena i si fas clic a qualsevol de les pel·lícules, s'obrirà la pantalla amb tota la informació de la pel·lícula."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:text="La primera opció és la d'anar a l'inici que ja hem explicat."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
 
 </RelativeLayout>
