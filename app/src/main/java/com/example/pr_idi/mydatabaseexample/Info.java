@@ -9,6 +9,6 @@ public class Info extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
-        setTitle("Informació");
+        setTitle("Sobre la app...");
     }
 }

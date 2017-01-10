@@ -44,8 +44,8 @@ public class Buscar extends BaseActivity {
 
                     CharSequence text = "No s'han trobat pel·lícules on hi participi aquest actor o que tinguin aquest títol";
                     int duration = Toast.LENGTH_SHORT;
-                    Toast t = Toast.makeText(getApplicationContext(),text,duration);
-                    t.show();
+                    Toast toast = Toast.makeText(getApplicationContext(),text,duration);
+                    toast.show();
                 }
                 return true;
             }

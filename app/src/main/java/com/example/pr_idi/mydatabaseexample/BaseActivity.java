@@ -18,14 +18,21 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    FilmData filmData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base);
         setView();
+        filmData = new FilmData(this);
+        filmData.open();
     }
 
     protected void setView() {
@@ -98,7 +105,20 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(getApplicationContext(),Buscar.class));
                 break;
             case R.id.reset:
-                //Borra tot i posa 4 noves pelis.
+                List<Film> films = filmData.getAllFilms();
+                for (Film f : films ){
+                    filmData.deleteFilm(f);
+                }
+                filmData.createFilm("Blade Runner","Ridley Scoot","EUA",1982, "Harrison Ford", 8);
+                filmData.createFilm("Rocky Horror Picture Show","Jim Sharman","UK",1975,"Tim Curry",5);
+                filmData.createFilm("The Godfather","Francis Ford Coppla","EUA",1972,"Al Pacino",7);
+                filmData.createFilm("Toy Story","John Lasseter","EUA",1995,"Tom Hanks",10);
+                CharSequence text = "S'ha reinicialitzat la base de dades";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(getApplicationContext(),text,duration);
+                toast.show();
+                Intent refresh = new Intent(this,getClass());
+                startActivity(refresh);
                 break;
             case R.id.about:
                 startActivity(new Intent(getApplicationContext(),Info.class));
