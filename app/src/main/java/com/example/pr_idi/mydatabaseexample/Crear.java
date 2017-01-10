@@ -43,12 +43,20 @@ public class Crear extends BaseActivity {
                 text = (EditText) findViewById(R.id.nota);
                 String noteText=text.getText().toString();
                 int note= Integer.parseInt(noteText);
-                filmData.createFilm(title, director, country, year,prota,note);
-                CharSequence text = "S'ha creat una nova pel·lícula";
-                int duration = Toast.LENGTH_SHORT;
-                Toast t = Toast.makeText(getApplicationContext(),text,duration);
-                t.show();
-                startActivity(new Intent(getApplicationContext(),Inici.class));
+                if (note<0 || note>10) {
+                    CharSequence textNote = "La puntuació ha d'estar entre 0 i 10";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast t = Toast.makeText(getApplicationContext(),textNote,duration);
+                    t.show();
+                }
+                else {
+                    filmData.createFilm(title, director, country, year, prota, note);
+                    CharSequence text = "S'ha creat una nova pel·lícula";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast t = Toast.makeText(getApplicationContext(), text, duration);
+                    t.show();
+                    startActivity(new Intent(getApplicationContext(), Inici.class));
+                }
                 break;
             case R.id.cancelar_crear:
                 startActivity(new Intent(getApplicationContext(),Inici.class));
