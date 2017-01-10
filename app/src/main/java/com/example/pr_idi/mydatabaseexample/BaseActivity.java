@@ -121,12 +121,14 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 Toast toast = Toast.makeText(getApplicationContext(),text,duration);
                 toast.show();
                 if (!getClass().isAssignableFrom(PeliRateDelete.class)) {
+                    System.out.println("HOLA");
                     Intent refresh = new Intent(this, getClass());
                     startActivity(refresh);
+                }else {
+                    Intent refresh = new Intent(this, getClass());
+                    refresh.putExtra("id", PeliRateDelete.peli.getTitle());
+                    startActivity(refresh);
                 }
-                Intent refresh = new Intent(this,getClass());
-                refresh.putExtra("id",PeliRateDelete.peli.getTitle());
-                startActivity(refresh);
                 break;
             case R.id.about:
                 startActivity(new Intent(getApplicationContext(),Info.class));
