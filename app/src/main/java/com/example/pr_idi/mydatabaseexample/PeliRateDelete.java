@@ -21,7 +21,7 @@ import java.util.Random;
 
 public class PeliRateDelete extends BaseActivity {
     FilmData filmData;
-    Film peli;
+    public static Film peli;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +92,7 @@ public class PeliRateDelete extends BaseActivity {
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(getApplicationContext(),text,duration);
                 toast.show();
-                finish();
+                startActivity(new Intent(getApplicationContext(),Inici.class));
                 break;
         }
     }

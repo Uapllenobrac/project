@@ -120,7 +120,12 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(getApplicationContext(),text,duration);
                 toast.show();
+                if (!getClass().isAssignableFrom(PeliRateDelete.class)) {
+                    Intent refresh = new Intent(this, getClass());
+                    startActivity(refresh);
+                }
                 Intent refresh = new Intent(this,getClass());
+                refresh.putExtra("id",PeliRateDelete.peli.getTitle());
                 startActivity(refresh);
                 break;
             case R.id.about:
