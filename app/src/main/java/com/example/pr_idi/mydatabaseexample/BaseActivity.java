@@ -104,6 +104,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.buscarmenu:
                 startActivity(new Intent(getApplicationContext(),Buscar.class));
                 break;
+            case R.id.crearmenu:
+                startActivity(new Intent(getApplicationContext(),Crear.class));
+                break;
             case R.id.reset:
                 List<Film> films = filmData.getAllFilms();
                 for (Film f : films ){

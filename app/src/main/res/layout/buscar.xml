@@ -26,7 +26,6 @@
                 android:layout_width="237dp"
                 android:layout_height="match_parent"
                 android:id="@+id/searchview"
-                android:elevation="0dp"
                 android:layout_weight="0.87"
                 app:queryHint="Buscar aquí.." />
 

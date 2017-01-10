@@ -7,6 +7,11 @@
         app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_search" />
     <item
+        android:id="@+id/crearmenu"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_add" />
+    <item
         android:id="@+id/reset"
         android:orderInCategory="100"
         android:title="Reinicialitzar la base de dades"
