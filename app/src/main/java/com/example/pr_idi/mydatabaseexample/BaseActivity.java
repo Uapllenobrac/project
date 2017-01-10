@@ -97,6 +97,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.buscarmenu:
                 startActivity(new Intent(getApplicationContext(),Buscar.class));
                 break;
+            case R.id.reset:
+                //Borra tot i posa 4 noves pelis.
+                break;
             case R.id.about:
                 startActivity(new Intent(getApplicationContext(),Info.class));
                 break;

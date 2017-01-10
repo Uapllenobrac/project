@@ -7,13 +7,19 @@
         app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_search" />
     <item
+        android:id="@+id/reset"
+        android:orderInCategory="100"
+        android:title="Reinicialitzar la base de dades"
+        app:showAsAction="never"/>
+
+    <item
         android:id="@+id/about"
         android:orderInCategory="100"
-        android:title="About"
+        android:title="Sobre la app.."
         app:showAsAction="never"/>
     <item
         android:id="@+id/help"
         android:orderInCategory="100"
-        android:title="Help"
+        android:title="Ajuda"
         app:showAsAction="never" />
 </menu>

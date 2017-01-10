@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.Random;
@@ -74,6 +75,10 @@ public class PeliRateDelete extends BaseActivity {
                 TextView t = (TextView) findViewById(R.id.rate);
                 t.setText(String.valueOf(peli.getCritics_rate()));
                 filmData.changeRate(peli,(int)r);
+                CharSequence text = "Valoració de la crítica canviada";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(getApplicationContext(),text,duration);
+                toast.show();
             }
         });
     }
@@ -83,6 +88,10 @@ public class PeliRateDelete extends BaseActivity {
         switch (view.getId()) {
             case R.id.borrabut:
                 filmData.deleteFilm(peli);
+                CharSequence text = "S'ha esborrat la pel·lícula de la base de dades";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(getApplicationContext(),text,duration);
+                toast.show();
                 finish();
                 break;
         }

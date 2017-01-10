@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,12 +41,11 @@ public class Buscar extends BaseActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 if (!callSearch(query)){
-                    List<String> notfound = new LinkedList<>();
-                    notfound.add("No s'han trobat pelicules on hi participi aquest actor o que tinguin aquest titol");
-                    final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_list_item_1,notfound);
-                    ListView lv = (ListView) findViewById(R.id.listbusca);
-                    lv.setAdapter(adapter);
-                    adapter.notifyDataSetChanged();
+
+                    CharSequence text = "No s'han trobat pel·lícules on hi participi aquest actor o que tinguin aquest títol";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast t = Toast.makeText(getApplicationContext(),text,duration);
+                    t.show();
                 }
                 return true;
             }

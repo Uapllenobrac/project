@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -43,6 +44,10 @@ public class Crear extends BaseActivity {
                 String noteText=text.getText().toString();
                 int note= Integer.parseInt(noteText);
                 filmData.createFilm(title, director, country, year,prota,note);
+                CharSequence text = "S'ha creat una nova pel·lícula";
+                int duration = Toast.LENGTH_SHORT;
+                Toast t = Toast.makeText(getApplicationContext(),text,duration);
+                t.show();
                 startActivity(new Intent(getApplicationContext(),Inici.class));
                 break;
             case R.id.cancelar_crear:
