@@ -10,7 +10,7 @@
     tools:context="com.example.pr_idi.mydatabaseexample.Inici">
 
     <TextView
-        android:text="sbore la app..."
+        android:text="Aplicació senzilla que permet gestionar una base de dades de pel·lícules personal. (Altes, baixes, modificacions, consultes, etc.) Els autors som el Pau Carbonell i el Max Meléndez, tots dos estudiants de la FIB i hem realitzat aquesta app com a projecte per a l'assignatura d'Interfícies i Disseny Gràfic (IDI)."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4" />

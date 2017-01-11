@@ -21,21 +21,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="b8db5176b3d838e9d9559827bf925df1982d00e0">
+        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_433741a52b34c500281b07280c32bc1beaca3c0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
         <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_6d753377817c1bf10bfcb8ddcb9f243f1a0bbb23/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="8e96621c2f0f97f1bdb49490492bbd98be926457">
-        <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_433741a52b34c500281b07280c32bc1beaca3c0e/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="06bbd1442a1622342c39f66236802e0d3066f1aa">
+        sha1="e9cb99a24e0f3af183cf8863e7e8eea089de094f">
         <dex dex="/home/m4x/AndroidStudioProjects/MyFilmDatabase/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_30e2b22902152351318d9c4fad03e2355e0f8b7c/classes.dex" />
     </item>
 
