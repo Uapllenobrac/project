@@ -96,4 +96,23 @@ public class PeliRateDelete extends BaseActivity {
                 break;
         }
     }
+
+    @Override
+    protected void onResume(){
+        filmData = new FilmData(this);
+        filmData.open();
+        boolean trobat = false;
+        final List<Film> values = filmData.getAllFilms();
+        for (Film f : values){
+            if (peli.getTitle().equals(f.getTitle())) trobat = true;
+        }
+        if (!trobat){
+            CharSequence text = "Aquetsa pel·lícula ha estat borrada";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(getApplicationContext(),text,duration);
+            toast.show();
+            startActivity(new Intent(getApplicationContext(),Inici.class));
+        }
+        super.onResume();
+    }
 }
